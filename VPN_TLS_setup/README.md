@@ -7,7 +7,7 @@
 **Шаг 1:** устанавливаем Wireguard management tools:
 `sudo apt install wireguard` - Для APT систем
 
-**Шаг 2:** Включаем IPv4 forwarding:
+**Шаг 2:** Включаем IPv4 forwarding (если не сделали это ранее):
 
 `sudo nano /etc/sysctl.d/99-sysctl.conf `
 
