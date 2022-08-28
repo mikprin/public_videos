@@ -15,7 +15,7 @@
 * `sudo apt-get update`
 * `sudo apt-get install ca-certificates curl gnupg lsb-release`
 
-Добавить репозиторий
+Добавить репозиторий и его ключи в список системы.
 
 * `sudo mkdir -p /etc/apt/keyrings`
 * `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
@@ -114,7 +114,6 @@ Systemd сервис:
 ## Docker compose
 
 Конманды `rm`,`run`,`stop` работают в связке аналогичной `docker run` но для контейнеров перечсисленных в `docker-compose.yaml`.
-
 Пример `docker-compose.yaml` с комментариями:
 
 ```
