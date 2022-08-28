@@ -6,10 +6,43 @@
 
 ## Linux
 
-1. Установить ядро докер для вашей платформы. Подробно тут: 
+1. Установить ядро докер для вашей платформы. Подробно тут в [официальной документации на английском](https://docs.docker.com/engine/install/ubuntu/). И вот тут [на русском](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ru)
+
+### Ububtu как пример:
+Установить пакеты
+`sudo apt-get update`
+`sudo apt-get install ca-certificates curl gnupg lsb-release`
+
+Добавить репозиторий
+`sudo mkdir -p /etc/apt/keyrings`
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
+
+Установить движок
+`sudo apt-get update` - важный шаг
+`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+
+
+Еще один важный шаг, добавить сервисы docker (если установщик не сделал это сам):
+`sudo systemctl enable docker.service`
+`sudo systemctl enable containerd.service`
+
+Проверяем установку
+`sudo docker run hello-world`
+
+Важный пост установочный шаг для удобства. Добавить себя в группу докер чтобы не использовать sudo:
+`sudo groupadd docker`
+`sudo usermod -aG docker $USER`
+Теперь можно запустить контейнер без sudo:
+`docker run hello-world`
 
 ## Windows
+Скачать [установочный файл](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe).
 
+Запустить в CMD:
+`start /w "" "Docker Desktop Installer.exe" install --accept-license`
+
+Добавить пользователя в группу
+`net localgroup docker-users <user> /add`
 
 ## Используем утилиту `docker`
 
