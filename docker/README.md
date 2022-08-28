@@ -6,7 +6,7 @@
 
 ## Linux
 
-1. Установить ядро докер для вашей платформы. Подробно тут в [официальной документации на английском](https://docs.docker.com/engine/install/ubuntu/). И вот тут [на русском](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ru)
+1. Установить ядро докер для вашей платформы. Подробно тут в [официальной документации на английском](https://docs.docker.com/engine/install/ubuntu/). И вот тут [на русском](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ru). Ниже я привел актуальные на момент видео гайды по установке на Ubuntu, Arch и Windows.
 
 ### Ububtu как пример:
 
