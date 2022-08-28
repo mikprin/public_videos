@@ -28,8 +28,8 @@
 
 Еще один важный шаг, добавить сервисы docker (если установщик не сделал это сам):
 
-* `sudo systemctl enable docker.service`
-* `sudo systemctl enable containerd.service`
+* `sudo systemctl enable --now docker.service`
+* `sudo systemctl enable --now containerd.service`
 
 Проверяем установку
 
@@ -43,6 +43,20 @@
 Теперь можно запустить контейнер без sudo:
 
 * `docker run hello-world`
+
+### Manjaro/Arch
+
+* `sudo pacman -Syu`
+* `sudo pacman -S docker`
+
+Systemd сервис:
+
+`sudo systemctl enable --now docker.service`
+
+Важный пост установочный шаг для удобства. Добавить себя в группу докер чтобы не использовать sudo:
+
+* `sudo groupadd docker`
+* `sudo usermod -aG docker $USER`
 
 ## Windows
 
@@ -79,6 +93,7 @@
 * `docker images` - перечислить загруженные образы
 * `docker rmi hello_world` - удалить образ с именем `hello_world`
 * `docker pull hello-world` - скачать образ с именем `hello world` из docker hub
+* `docker search hello_world` - найти образ hello_world в docker hub
 
 ## Запуск контейнеров
 
