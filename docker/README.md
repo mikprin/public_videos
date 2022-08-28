@@ -13,26 +13,22 @@
 Установить пакеты
 
 * `sudo apt-get update`
-
 * `sudo apt-get install ca-certificates curl gnupg lsb-release`
 
 Добавить репозиторий
 
 * `sudo mkdir -p /etc/apt/keyrings`
-
 * `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
 
 Установить движок
 
 * `sudo apt-get update` - важный шаг
-
 * `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
 
 
 Еще один важный шаг, добавить сервисы docker (если установщик не сделал это сам):
 
 * `sudo systemctl enable docker.service`
-
 * `sudo systemctl enable containerd.service`
 
 Проверяем установку
@@ -42,7 +38,6 @@
 Важный пост установочный шаг для удобства. Добавить себя в группу докер чтобы не использовать sudo:
 
 * `sudo groupadd docker`
-
 * `sudo usermod -aG docker $USER`
 
 Теперь можно запустить контейнер без sudo:
