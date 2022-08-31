@@ -23,7 +23,7 @@
 Установить движок
 
 * `sudo apt-get update` - важный шаг
-* `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+* `sudo apt-get install docker docker-compose` - сама установка
 
 
 Еще один важный шаг, добавить сервисы docker (если установщик не сделал это сам):
