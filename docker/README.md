@@ -60,17 +60,13 @@ Systemd сервис:
 
 ## Windows
 
-Скачать [установочный файл](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe).
-
-Запустить в CMD:
-
-`start /w "" "Docker Desktop Installer.exe" install --accept-license`
+Скачать и запустить [установочный файл](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe).
 
 Добавить пользователя в группу
 
 `net localgroup docker-users <user> /add`
 
-## Используем утилиту `docker`
+## Используем утилиту `docker` на linux
 
 Одной из самых простых и удачных утилит для нативного управления контейнерами является встроенная утилита `docker`.
 Чтобы вызвать ее, нужно установить движок`docker-engine` и получаете ее в подарок. 
